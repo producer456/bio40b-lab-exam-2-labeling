@@ -359,314 +359,314 @@ const IMAGE_DATA = {
 const PRESET_KEYS = {
   "heart_internal": [
     {
-      "id": 1,
-      "x": 40.38,
-      "y": 5.0,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Aorta (ascending)",
-      "func": "Receives oxygenated blood from the left ventricle and carries it to the systemic circulation."
-    },
-    {
-      "id": 2,
-      "x": 23.08,
-      "y": 5.0,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Superior vena cava",
-      "func": "Returns deoxygenated blood from the head, neck, and upper limbs to the right atrium."
-    },
-    {
-      "id": 3,
-      "x": 40.38,
-      "y": 21.25,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Pulmonary trunk",
-      "func": "Carries deoxygenated blood from the right ventricle toward the lungs; splits into the L and R pulmonary arteries."
-    },
-    {
-      "id": 4,
-      "x": 11.54,
-      "y": 32.5,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Right pulmonary veins",
-      "func": "Return oxygenated blood from the right lung to the left atrium."
-    },
-    {
-      "id": 5,
-      "x": 26.92,
-      "y": 43.75,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Right atrium",
-      "func": "Receives deoxygenated blood from the venae cavae and coronary sinus, then pumps it to the right ventricle."
-    },
-    {
-      "id": 6,
-      "x": 34.62,
-      "y": 56.25,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Tricuspid valve",
-      "func": "Right AV valve; prevents backflow from the right ventricle into the right atrium during ventricular contraction."
-    },
-    {
-      "id": 7,
-      "x": 19.23,
-      "y": 63.75,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Right ventricle",
-      "func": "Pumps deoxygenated blood into the pulmonary trunk to the lungs."
-    },
-    {
-      "id": 8,
-      "x": 46.15,
-      "y": 61.25,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Chordae tendineae",
-      "func": "Fibrous cords that anchor the AV-valve cusps to the papillary muscles, preventing valve prolapse."
-    },
-    {
-      "id": 9,
-      "x": 34.62,
-      "y": 73.75,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Trabeculae carneae",
-      "func": "Muscular ridges on the internal walls of the ventricles."
-    },
-    {
-      "id": 10,
-      "x": 21.15,
-      "y": 91.25,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Inferior vena cava",
-      "func": "Returns deoxygenated blood from the trunk and lower limbs to the right atrium."
-    },
-    {
-      "id": 11,
-      "x": 67.31,
-      "y": 15.0,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Left pulmonary artery",
-      "func": "Carries deoxygenated blood from the pulmonary trunk to the left lung."
-    },
-    {
-      "id": 12,
-      "x": 21.15,
-      "y": 15.0,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Right pulmonary artery",
-      "func": "Carries deoxygenated blood from the pulmonary trunk to the right lung."
-    },
-    {
-      "id": 13,
-      "x": 75.0,
-      "y": 28.75,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 122,
+      "x": 80.92,
+      "y": 18.1,
+      "labelDx": 4.3940591585997115,
+      "labelDy": 4.3039894339336975,
       "word": "Left atrium",
       "func": "Receives oxygenated blood from the pulmonary veins and pumps it to the left ventricle."
     },
     {
-      "id": 14,
-      "x": 84.62,
-      "y": 32.5,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 123,
+      "x": 77.94,
+      "y": 26.22,
+      "labelDx": 6.4341580536638645,
+      "labelDy": 5.6960105660663025,
       "word": "Left pulmonary veins",
       "func": "Return oxygenated blood from the left lung to the left atrium."
     },
     {
-      "id": 15,
-      "x": 71.15,
-      "y": 41.25,
+      "id": 124,
+      "x": 81.31,
+      "y": 37.35,
       "labelDx": 0,
       "labelDy": 5,
       "word": "Bicuspid (mitral) valve",
       "func": "Left AV valve; prevents backflow from the left ventricle into the left atrium."
     },
     {
-      "id": 16,
-      "x": 82.69,
-      "y": 60.0,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Left ventricle",
-      "func": "Pumps oxygenated blood into the aorta for systemic circulation; thickest-walled chamber."
+      "id": 126,
+      "x": 81.78,
+      "y": 94.54,
+      "labelDx": -11.377474607088537,
+      "labelDy": 6.3110358627289616,
+      "word": "Endocardium",
+      "func": "Smooth inner endothelial lining of the heart chambers and valves."
     },
     {
-      "id": 17,
-      "x": 67.31,
-      "y": 67.5,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Papillary muscle",
-      "func": "Contracts to tension the chordae tendineae, keeping the AV valves closed during ventricular systole."
-    },
-    {
-      "id": 18,
-      "x": 55.77,
-      "y": 70.0,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Interventricular septum",
-      "func": "Muscular wall that separates the right and left ventricles."
-    },
-    {
-      "id": 19,
-      "x": 96.15,
-      "y": 73.75,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Epicardium",
-      "func": "Outermost layer of the heart wall (the visceral pericardium)."
-    },
-    {
-      "id": 20,
-      "x": 90.38,
-      "y": 81.25,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 129,
+      "x": 81,
+      "y": 86.1,
+      "labelDx": 4.31559381648186,
+      "labelDy": -0.619815043575886,
       "word": "Myocardium",
       "func": "Thick middle layer of cardiac muscle responsible for the heart's contraction."
     },
     {
-      "id": 21,
-      "x": 86.54,
-      "y": 87.5,
+      "id": 136,
+      "x": 81,
+      "y": 80.36,
+      "labelDx": 5.100247237660379,
+      "labelDy": -1.85617435316258,
+      "word": "Epicardium",
+      "func": "Outermost layer of the heart wall (the visceral pericardium)."
+    },
+    {
+      "id": 137,
+      "x": 80.42,
+      "y": 66.89,
+      "labelDx": 4.951525146954339,
+      "labelDy": 3.6651430043834434,
+      "word": "Papillary muscle",
+      "func": "Contracts to tension the chordae tendineae, keeping the AV valves closed during ventricular systole."
+    },
+    {
+      "id": 138,
+      "x": 79.9,
+      "y": 59.35,
+      "labelDx": 6.591088737899568,
+      "labelDy": -0.2826261409613329,
+      "word": "Left ventricle",
+      "func": "Pumps oxygenated blood into the aorta for systemic circulation; thickest-walled chamber."
+    },
+    {
+      "id": 142,
+      "x": 19.32,
+      "y": 69.8,
+      "labelDx": -6.591088737899568,
+      "labelDy": 1.4033183721114328,
+      "word": "Chordae tendineae",
+      "func": "Fibrous cords that anchor the AV-valve cusps to the papillary muscles, preventing valve prolapse."
+    },
+    {
+      "id": 143,
+      "x": 19.32,
+      "y": 22.48,
+      "labelDx": -5.963366000956752,
+      "labelDy": 2.190092478212057,
+      "word": "Pulmonary trunk",
+      "func": "Carries deoxygenated blood from the right ventricle toward the lungs; splits into the L and R pulmonary arteries."
+    },
+    {
+      "id": 146,
+      "x": 19.09,
+      "y": 42.71,
+      "labelDx": -5.100247237660379,
+      "labelDy": 1.0661294694968797,
+      "word": "Right atrium",
+      "func": "Receives deoxygenated blood from the venae cavae and coronary sinus, then pumps it to the right ventricle."
+    },
+    {
+      "id": 147,
+      "x": 19.64,
+      "y": 15.85,
+      "labelDx": -5.571039290367492,
+      "labelDy": -1.4065891496765097,
+      "word": "Right pulmonary artery",
+      "func": "Carries deoxygenated blood from the pulmonary trunk to the right lung."
+    },
+    {
+      "id": 149,
+      "x": 18.85,
+      "y": 61.93,
+      "labelDx": -4.472524500717563,
+      "labelDy": -0.05783353921829715,
+      "word": "Right ventricle",
+      "func": "Pumps deoxygenated blood into the pulmonary trunk to the lungs."
+    },
+    {
+      "id": 150,
+      "x": 19.01,
+      "y": 31.02,
+      "labelDx": -3.609405737421192,
+      "labelDy": 2.639677681698128,
+      "word": "Right pulmonary veins",
+      "func": "Return oxygenated blood from the right lung to the left atrium."
+    },
+    {
+      "id": 151,
+      "x": 20.34,
+      "y": 6.86,
+      "labelDx": 2.118564237182004,
+      "labelDy": -2.755344760134723,
+      "word": "Superior vena cava",
+      "func": "Returns deoxygenated blood from the head, neck, and upper limbs to the right atrium."
+    },
+    {
+      "id": 153,
+      "x": 20.58,
+      "y": 77.1,
+      "labelDx": -4.864851211306823,
+      "labelDy": 1.4033183721114328,
+      "word": "Trabeculae carneae",
+      "func": "Muscular ridges on the internal walls of the ventricles."
+    },
+    {
+      "id": 155,
+      "x": 18.46,
+      "y": 54.85,
+      "labelDx": -4.0017324480104515,
+      "labelDy": 0.279355363396256,
+      "word": "Tricuspid valve",
+      "func": "Right AV valve; prevents backflow from the right ventricle into the right atrium during ventricular contraction."
+    },
+    {
+      "id": 156,
+      "x": 61.93,
+      "y": 75.64,
+      "labelDx": 6.748019422135272,
+      "labelDy": -0.05783353921829715,
+      "word": "Interventricular septum",
+      "func": "Muscular wall that separates the right and left ventricles."
+    },
+    {
+      "id": 157,
+      "x": 19.17,
+      "y": 91.72,
       "labelDx": 0,
       "labelDy": 5,
-      "word": "Endocardium",
-      "func": "Smooth inner endothelial lining of the heart chambers and valves."
+      "word": "Inferior vena cava",
+      "func": "Returns deoxygenated blood from the trunk and lower limbs to the right atrium."
+    },
+    {
+      "id": 158,
+      "x": 48.75,
+      "y": 6.59,
+      "labelDx": 10.229760427505184,
+      "labelDy": -1.9603842908768376,
+      "word": "Aorta (ascending)",
+      "func": "Receives oxygenated blood from the left ventricle and carries it to the systemic circulation."
+    },
+    {
+      "id": 159,
+      "x": 67.85,
+      "y": 14.65,
+      "labelDx": 7.416576309941257,
+      "labelDy": -7.211200510310242,
+      "word": "Left pulmonary artery",
+      "func": "Carries deoxygenated blood from the pulmonary trunk to the left lung."
     }
   ],
   "heart_surface_ant": [
     {
-      "id": 22,
-      "x": 14.29,
-      "y": 30.43,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Ascending aorta",
-      "func": "Carries oxygenated blood from the left ventricle to the body; gives rise to the coronary arteries."
-    },
-    {
-      "id": 23,
-      "x": 47.62,
-      "y": 15.22,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Aortic arch",
-      "func": "Curve of the aorta that gives off the brachiocephalic, left common carotid, and left subclavian arteries."
-    },
-    {
-      "id": 24,
-      "x": 45.24,
-      "y": 28.26,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Ligamentum arteriosum",
-      "func": "Fetal remnant of the ductus arteriosus, connecting the pulmonary trunk to the aortic arch."
-    },
-    {
-      "id": 25,
-      "x": 57.14,
-      "y": 39.13,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Auricle of left atrium",
-      "func": "Ear-like flap that increases the volume capacity of the left atrium."
-    },
-    {
-      "id": 26,
-      "x": 4.76,
-      "y": 39.13,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Right auricle",
-      "func": "Ear-like extension that increases the capacity of the right atrium."
-    },
-    {
-      "id": 27,
-      "x": 47.62,
-      "y": 52.17,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Left coronary artery",
-      "func": "Supplies oxygenated blood to the left side of the heart; branches into the circumflex and anterior interventricular arteries."
-    },
-    {
-      "id": 28,
-      "x": 7.14,
-      "y": 54.35,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Right coronary artery",
-      "func": "Supplies oxygenated blood to the right side of the heart."
-    },
-    {
-      "id": 29,
-      "x": 47.62,
-      "y": 73.91,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 160,
+      "x": 75.47,
+      "y": 88.63,
+      "labelDx": 12.830188679245284,
+      "labelDy": -2.0397111913357406,
       "word": "Anterior interventricular artery",
       "func": "Runs in the anterior interventricular groove supplying both ventricles and the septum (the 'LAD')."
     },
     {
-      "id": 30,
-      "x": 52.38,
-      "y": 67.39,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 161,
+      "x": 65.57,
+      "y": 16.79,
+      "labelDx": 23.962264150943398,
+      "labelDy": -0.9566787003610111,
+      "word": "Aortic arch",
+      "func": "Curve of the aorta that gives off the brachiocephalic, left common carotid, and left subclavian arteries."
+    },
+    {
+      "id": 164,
+      "x": 62.74,
+      "y": 99.46,
+      "labelDx": 16.69811320754717,
+      "labelDy": -1.1030526707292658,
+      "word": "Apex of heart",
+      "func": "Inferior pointed tip of the heart, formed by the left ventricle."
+    },
+    {
+      "id": 165,
+      "x": 71.51,
+      "y": 79.93,
+      "labelDx": 14.716981132075471,
+      "labelDy": -1.4572425828970328,
       "word": "Great cardiac vein",
       "func": "Collects deoxygenated blood from the anterior heart and empties into the coronary sinus."
     },
     {
-      "id": 31,
-      "x": 42.86,
-      "y": 93.48,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Apex of heart",
-      "func": "Inferior pointed tip of the heart, formed by the left ventricle."
+      "id": 166,
+      "x": 28.02,
+      "y": 31.06,
+      "labelDx": -7.547169811320755,
+      "labelDy": -0.0610820244328103,
+      "word": "Ascending aorta",
+      "func": "Carries oxygenated blood from the left ventricle to the body; gives rise to the coronary arteries."
+    },
+    {
+      "id": 167,
+      "x": 70.19,
+      "y": 60.73,
+      "labelDx": 13.962264150943396,
+      "labelDy": -0.5846422338568935,
+      "word": "Left coronary artery",
+      "func": "Supplies oxygenated blood to the left side of the heart; branches into the circumflex and anterior interventricular arteries."
+    },
+    {
+      "id": 170,
+      "x": 69.06,
+      "y": 20.24,
+      "labelDx": 13.584905660377359,
+      "labelDy": 2.033158813263525,
+      "word": "Ligamentum arteriosum",
+      "func": "Fetal remnant of the ductus arteriosus, connecting the pulmonary trunk to the aortic arch."
+    },
+    {
+      "id": 171,
+      "x": 74.34,
+      "y": 43.63,
+      "labelDx": 13.20754716981132,
+      "labelDy": -1.4572425828970328,
+      "word": "Auricle of left atrium",
+      "func": "Ear-like flap that increases the volume capacity of the left atrium."
+    },
+    {
+      "id": 172,
+      "x": 26.32,
+      "y": 61.95,
+      "labelDx": -12.358490566037736,
+      "labelDy": -1.4572425828970328,
+      "word": "Right coronary artery",
+      "func": "Supplies oxygenated blood to the right side of the heart."
+    },
+    {
+      "id": 173,
+      "x": 25.09,
+      "y": 51.13,
+      "labelDx": -13.49056603773585,
+      "labelDy": -7.5654450261780095,
+      "word": "Right auricle",
+      "func": "Ear-like extension that increases the capacity of the right atrium."
     }
   ],
   "heart_surface_post": [
     {
-      "id": 32,
-      "x": 43.9,
-      "y": 50.0,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 175,
+      "x": 71.79,
+      "y": 53.11,
+      "labelDx": 12.641509433962264,
+      "labelDy": 0.15570934256055402,
       "word": "Coronary sinus",
       "func": "Large vein on the posterior heart that drains cardiac (deoxygenated) blood into the right atrium."
     },
     {
-      "id": 33,
-      "x": 34.15,
-      "y": 75.0,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Middle cardiac vein",
-      "func": "Drains the posterior heart and empties into the coronary sinus."
-    },
-    {
-      "id": 34,
-      "x": 39.02,
-      "y": 68.75,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 177,
+      "x": 74.34,
+      "y": 74.74,
+      "labelDx": 9.90566037735849,
+      "labelDy": -0.01730103806228378,
       "word": "Posterior interventricular artery",
       "func": "Branch of the right coronary artery supplying the posterior walls of the ventricles."
+    },
+    {
+      "id": 178,
+      "x": 69.43,
+      "y": 81.83,
+      "labelDx": 17.075471698113205,
+      "labelDy": 1.5397923875432524,
+      "word": "Middle cardiac vein",
+      "func": "Drains the posterior heart and empties into the coronary sinus."
     }
   ],
   "heart_valves": [
@@ -709,74 +709,65 @@ const PRESET_KEYS = {
   ],
   "heart_conduction": [
     {
-      "id": 39,
-      "x": 22.92,
-      "y": 32.22,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 180,
+      "x": 38.49,
+      "y": 40.88,
+      "labelDx": -22.830188679245282,
+      "labelDy": -0.17464424320827998,
       "word": "Sinoatrial (SA) node",
       "func": "The heart's pacemaker; initiates each heartbeat and sets the heart rate (in the right atrial wall)."
     },
     {
-      "id": 40,
-      "x": 27.08,
-      "y": 50.0,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 181,
+      "x": 41.42,
+      "y": 53.56,
+      "labelDx": -30.09433962264151,
+      "labelDy": -0.5627425614488999,
       "word": "Atrioventricular (AV) node",
       "func": "Delays the impulse before it reaches the ventricles, letting the atria finish contracting first."
     },
     {
-      "id": 41,
-      "x": 41.67,
-      "y": 54.44,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Atrioventricular bundle (bundle of His)",
-      "func": "Carries the impulse from the AV node into the interventricular septum; the only electrical link between atria and ventricles."
+      "id": 182,
+      "x": 79.25,
+      "y": 84.73,
+      "labelDx": 9.433962264150944,
+      "labelDy": 1.5071151358344115,
+      "word": "Purkinje fibers",
+      "func": "Distribute the impulse through the ventricular myocardium, triggering ventricular contraction."
     },
     {
-      "id": 42,
-      "x": 56.25,
-      "y": 68.89,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 183,
+      "x": 79.25,
+      "y": 78.65,
+      "labelDx": 11.981132075471699,
+      "labelDy": -4.314359637774903,
       "word": "Right and left bundle branches",
       "func": "Conduct the impulse down either side of the interventricular septum toward the apex."
     },
     {
-      "id": 43,
-      "x": 62.5,
-      "y": 82.22,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Purkinje fibers",
-      "func": "Distribute the impulse through the ventricular myocardium, triggering ventricular contraction."
+      "id": 184,
+      "x": 77.54,
+      "y": 58.09,
+      "labelDx": 9.319664492078285,
+      "labelDy": -5.090556274256144,
+      "word": "Atrioventricular bundle (bundle of His)",
+      "func": "Carries the impulse from the AV node into the interventricular septum; the only electrical link between atria and ventricles."
     }
   ],
   "blood_formed": [
     {
       "id": 44,
-      "x": 28.0,
-      "y": 22.0,
+      "x": 28,
+      "y": 22,
       "labelDx": 0,
       "labelDy": 5,
       "word": "Erythrocytes",
       "func": "Carry oxygen (and some carbon dioxide) throughout the body using hemoglobin."
     },
     {
-      "id": 45,
-      "x": 72.0,
-      "y": 20.0,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Platelets",
-      "func": "Cell fragments that clot blood and stop bleeding (hemostasis)."
-    },
-    {
       "id": 46,
-      "x": 15.0,
-      "y": 60.0,
+      "x": 15,
+      "y": 60,
       "labelDx": 0,
       "labelDy": 5,
       "word": "Monocyte",
@@ -784,8 +775,8 @@ const PRESET_KEYS = {
     },
     {
       "id": 47,
-      "x": 40.0,
-      "y": 62.0,
+      "x": 40,
+      "y": 62,
       "labelDx": 0,
       "labelDy": 5,
       "word": "Lymphocyte",
@@ -793,8 +784,8 @@ const PRESET_KEYS = {
     },
     {
       "id": 48,
-      "x": 68.0,
-      "y": 55.0,
+      "x": 68,
+      "y": 55,
       "labelDx": 0,
       "labelDy": 5,
       "word": "Eosinophil",
@@ -802,8 +793,8 @@ const PRESET_KEYS = {
     },
     {
       "id": 49,
-      "x": 87.0,
-      "y": 55.0,
+      "x": 87,
+      "y": 55,
       "labelDx": 0,
       "labelDy": 5,
       "word": "Basophil",
@@ -811,115 +802,124 @@ const PRESET_KEYS = {
     },
     {
       "id": 50,
-      "x": 77.0,
-      "y": 78.0,
+      "x": 77,
+      "y": 78,
       "labelDx": 0,
       "labelDy": 5,
       "word": "Neutrophil",
       "func": "Most abundant WBC; a first-responder that phagocytizes bacteria."
+    },
+    {
+      "id": 185,
+      "x": 66.51,
+      "y": 24.78,
+      "labelDx": 0,
+      "labelDy": 5,
+      "word": "Platelets",
+      "func": "Cell fragments that clot blood and stop bleeding (hemostasis)."
     }
   ],
   "vessel_cutaway": [
     {
-      "id": 51,
-      "x": 14.81,
-      "y": 42.31,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Tunica externa",
-      "func": "Outermost vessel layer of connective tissue that anchors and protects the vessel."
-    },
-    {
-      "id": 52,
-      "x": 40.74,
-      "y": 42.31,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 186,
+      "x": 66.7,
+      "y": 1.2,
+      "labelDx": -0.2830188679245283,
+      "labelDy": 2.7477477477477477,
       "word": "Tunica media",
       "func": "Middle layer of smooth muscle and elastic tissue that controls vessel diameter (constriction/dilation)."
     },
     {
-      "id": 53,
-      "x": 77.78,
-      "y": 51.92,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Internal elastic lamina",
-      "func": "Sheet of elastic tissue between the tunica interna and tunica media."
+      "id": 187,
+      "x": 51.51,
+      "y": 3.75,
+      "labelDx": 0.4716981132075472,
+      "labelDy": -0.8558558558558556,
+      "word": "Tunica externa",
+      "func": "Outermost vessel layer of connective tissue that anchors and protects the vessel."
     },
     {
-      "id": 54,
-      "x": 90.74,
-      "y": 30.77,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 189,
+      "x": 79.53,
+      "y": 31.83,
+      "labelDx": 8.49056603773585,
+      "labelDy": 0.04504504504504503,
       "word": "Endothelium",
       "func": "Simple squamous epithelium lining the lumen; gives a smooth, low-friction surface for blood flow."
+    },
+    {
+      "id": 190,
+      "x": 76.04,
+      "y": 64.41,
+      "labelDx": 13.20754716981132,
+      "labelDy": -1.0060060060060056,
+      "word": "Internal elastic lamina",
+      "func": "Sheet of elastic tissue between the tunica interna and tunica media."
     }
   ],
   "vessel_cross": [
     {
-      "id": 55,
-      "x": 66.67,
-      "y": 63.16,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 191,
+      "x": 66.23,
+      "y": 63.17,
+      "labelDx": 16.60377358490566,
+      "labelDy": -2.613168724279835,
       "word": "Lumen",
       "func": "The hollow central channel of the vessel through which blood flows."
     },
     {
-      "id": 56,
-      "x": 63.89,
-      "y": 86.84,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 195,
+      "x": 60.85,
+      "y": 84.77,
+      "labelDx": 17.358490566037734,
+      "labelDy": 10.761316872427983,
       "word": "Tunica interna (intima)",
       "func": "Innermost layer lining the lumen; made of endothelium on a thin connective-tissue layer."
     }
   ],
   "cardiac_dia": [
     {
-      "id": 57,
-      "x": 65.62,
-      "y": 40.0,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Intercalated disc",
-      "func": "Junction between cardiac muscle cells; its gap junctions let the cells contract in unison."
-    },
-    {
-      "id": 58,
-      "x": 21.88,
-      "y": 33.33,
+      "id": 196,
+      "x": 31.98,
+      "y": 42.04,
       "labelDx": 0,
       "labelDy": 5,
       "word": "Myofiber",
       "func": "A cardiac muscle cell \u2014 branched and striated, joined to neighbors by intercalated discs."
+    },
+    {
+      "id": 197,
+      "x": 37.36,
+      "y": 10.37,
+      "labelDx": 0,
+      "labelDy": 5,
+      "word": "Intercalated disc",
+      "func": "Junction between cardiac muscle cells; its gap junctions let the cells contract in unison."
     }
   ],
   "cardiac_histo": [
     {
-      "id": 59,
-      "x": 66.67,
-      "y": 48.89,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 198,
+      "x": 57.83,
+      "y": 45.25,
+      "labelDx": 11.981132075471699,
+      "labelDy": -9.915254237288137,
       "word": "Nucleus (central)",
       "func": "Cardiac muscle cells are usually uninucleate, with a single centrally placed nucleus."
     },
     {
-      "id": 60,
-      "x": 21.11,
-      "y": 52.22,
-      "labelDx": 0,
+      "id": 199,
+      "x": 50,
+      "y": 44.75,
+      "labelDx": -8.773584905660377,
       "labelDy": 5,
       "word": "Striations",
       "func": "Regular banding of overlapping actin and myosin filaments \u2014 cardiac muscle is striated."
     },
     {
-      "id": 61,
-      "x": 44.44,
-      "y": 65.56,
+      "id": 200,
+      "x": 91.23,
+      "y": 47.46,
       "labelDx": 0,
       "labelDy": 5,
       "word": "Myofiber",
@@ -928,278 +928,278 @@ const PRESET_KEYS = {
   ],
   "heart_wall": [
     {
-      "id": 62,
-      "x": 4.88,
-      "y": 20.69,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 202,
+      "x": 13.4,
+      "y": 19.03,
+      "labelDx": -6.886792452830188,
+      "labelDy": -7.643678160919542,
       "word": "Endocardium",
       "func": "Smooth inner endothelial lining of the heart chambers and valves."
     },
     {
-      "id": 63,
-      "x": 29.27,
-      "y": 37.93,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 203,
+      "x": 13.77,
+      "y": 33.08,
+      "labelDx": -5,
+      "labelDy": 12.407407407407407,
       "word": "Myocardium",
       "func": "Thick middle layer of cardiac muscle that contracts to pump blood."
     },
     {
-      "id": 64,
-      "x": 65.85,
-      "y": 58.62,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Epicardium (visceral serous pericardium)",
-      "func": "Outermost layer of the heart wall \u2014 the visceral layer of the serous pericardium."
-    },
-    {
-      "id": 65,
-      "x": 70.73,
-      "y": 24.14,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 204,
+      "x": 68.68,
+      "y": 7.15,
+      "labelDx": 23.77358490566038,
+      "labelDy": 6.021711366538953,
       "word": "Pericardial cavity",
       "func": "Fluid-filled space between the visceral and parietal serous layers that lets the heart beat with little friction."
     },
     {
-      "id": 66,
-      "x": 78.05,
-      "y": 44.83,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Parietal layer of serous pericardium",
-      "func": "Serous membrane lining the fibrous pericardium; forms the outer wall of the pericardial cavity."
-    },
-    {
-      "id": 67,
-      "x": 87.8,
-      "y": 31.03,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 205,
+      "x": 83.77,
+      "y": 27.2,
+      "labelDx": 7.641509433962264,
+      "labelDy": 0.14687100893997496,
       "word": "Fibrous pericardium",
       "func": "Tough outer connective-tissue sac that anchors the heart and keeps it from overfilling."
+    },
+    {
+      "id": 206,
+      "x": 64.34,
+      "y": 78.8,
+      "labelDx": 27.830188679245282,
+      "labelDy": -1.1302681992337158,
+      "word": "Epicardium (visceral serous pericardium)",
+      "func": "Outermost layer of the heart wall \u2014 the visceral layer of the serous pericardium."
+    },
+    {
+      "id": 209,
+      "x": 77.05,
+      "y": 51.21,
+      "labelDx": 16.56165616561656,
+      "labelDy": -1.5134099616858236,
+      "word": "Parietal layer of serous pericardium",
+      "func": "Serous membrane lining the fibrous pericardium; forms the outer wall of the pericardial cavity."
     }
   ],
   "resp_overview": [
     {
-      "id": 68,
-      "x": 40.48,
-      "y": 15.29,
+      "id": 210,
+      "x": 65,
+      "y": 88.51,
+      "labelDx": -47.45283018867924,
+      "labelDy": -1.3457330415754925,
+      "word": "Diaphragm",
+      "func": "Main muscle of inspiration; contracts and flattens to draw air into the lungs."
+    },
+    {
+      "id": 211,
+      "x": 52.45,
+      "y": 74.51,
+      "labelDx": -39.05660377358491,
+      "labelDy": -2.2210065645514225,
+      "word": "Lung",
+      "func": "Organ of gas exchange where oxygen enters the blood and carbon dioxide leaves it."
+    },
+    {
+      "id": 212,
+      "x": 60.28,
+      "y": 36.98,
+      "labelDx": -38.20754716981132,
+      "labelDy": -0.03282275711159777,
+      "word": "Larynx",
+      "func": "Voice box; routes air into the trachea, produces sound, and keeps food out of the airway."
+    },
+    {
+      "id": 213,
+      "x": 59.91,
+      "y": 25.71,
+      "labelDx": 19.622641509433965,
+      "labelDy": -2.1115973741794303,
+      "word": "Pharynx",
+      "func": "Shared passageway that conducts air (and, in its lower parts, food) toward the larynx and esophagus."
+    },
+    {
+      "id": 214,
+      "x": 63.02,
+      "y": 43,
+      "labelDx": 16.79245283018868,
+      "labelDy": 0.18599562363238498,
+      "word": "Trachea",
+      "func": "Windpipe; conducts air between the larynx and the bronchi."
+    },
+    {
+      "id": 225,
+      "x": 23.87,
+      "y": 8.75,
       "labelDx": 0,
       "labelDy": 5,
       "word": "Nasal cavity",
       "func": "Warms, humidifies, and filters incoming air before it travels to the lungs."
     },
     {
-      "id": 69,
-      "x": 64.29,
-      "y": 25.88,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Pharynx",
-      "func": "Shared passageway that conducts air (and, in its lower parts, food) toward the larynx and esophagus."
-    },
-    {
-      "id": 70,
-      "x": 59.52,
-      "y": 37.65,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Larynx",
-      "func": "Voice box; routes air into the trachea, produces sound, and keeps food out of the airway."
-    },
-    {
-      "id": 71,
-      "x": 71.43,
-      "y": 42.35,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Trachea",
-      "func": "Windpipe; conducts air between the larynx and the bronchi."
-    },
-    {
-      "id": 72,
-      "x": 71.43,
-      "y": 57.65,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 226,
+      "x": 64.81,
+      "y": 59.96,
+      "labelDx": 27.92452830188679,
+      "labelDy": 0.29540481400437635,
       "word": "Main (primary) bronchus",
       "func": "Conducts air from the trachea into a lung."
-    },
-    {
-      "id": 73,
-      "x": 45.24,
-      "y": 65.88,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Lung",
-      "func": "Organ of gas exchange where oxygen enters the blood and carbon dioxide leaves it."
-    },
-    {
-      "id": 74,
-      "x": 69.05,
-      "y": 82.35,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Diaphragm",
-      "func": "Main muscle of inspiration; contracts and flattens to draw air into the lungs."
     }
   ],
   "resp_upper": [
     {
-      "id": 75,
-      "x": 80.43,
-      "y": 18.09,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 227,
+      "x": 41.65,
+      "y": 87.95,
+      "labelDx": -20,
+      "labelDy": -0.17928286852589626,
+      "word": "Epiglottis",
+      "func": "Flap of cartilage that covers the laryngeal opening during swallowing to keep food out of the airway."
+    },
+    {
+      "id": 228,
+      "x": 49.67,
+      "y": 38.55,
+      "labelDx": -27.641509433962263,
+      "labelDy": 3.2071713147410357,
+      "word": "Uvula",
+      "func": "Fleshy tip of the soft palate that helps close off the nasopharynx during swallowing."
+    },
+    {
+      "id": 229,
+      "x": 76.46,
+      "y": 34.06,
+      "labelDx": 12.169811320754716,
+      "labelDy": -0.8764940239043826,
+      "word": "Hard palate",
+      "func": "Bony front of the roof of the mouth that separates the oral and nasal cavities."
+    },
+    {
+      "id": 230,
+      "x": 46.37,
+      "y": 96.31,
+      "labelDx": 40,
+      "labelDy": 0.31872509960159334,
+      "word": "Trachea",
+      "func": "Windpipe; conducts air between the larynx and the bronchi."
+    },
+    {
+      "id": 231,
+      "x": 77.59,
+      "y": 40.04,
+      "labelDx": 12.735849056603774,
+      "labelDy": 1.4143426294820713,
+      "word": "Soft palate",
+      "func": "Muscular back of the palate; rises to block the nasopharynx during swallowing."
+    },
+    {
+      "id": 232,
+      "x": 27.03,
+      "y": 57.97,
+      "labelDx": -6.320754716981132,
+      "labelDy": 0.5179282868525892,
+      "word": "Oropharynx",
+      "func": "Middle part of the pharynx behind the mouth; a shared passage for air and food."
+    },
+    {
+      "id": 233,
+      "x": 59.76,
+      "y": 69.62,
+      "labelDx": 21.60377358490566,
+      "labelDy": 0.019920318725099584,
+      "word": "Cricoid cartilage",
+      "func": "Ring-shaped cartilage that supports the larynx and connects it to the trachea."
+    },
+    {
+      "id": 234,
+      "x": 48.07,
+      "y": 62.15,
+      "labelDx": -26.50943396226415,
+      "labelDy": 2.8087649402390436,
+      "word": "Laryngopharynx",
+      "func": "Lowest part of the pharynx; a shared passage opening into the larynx and esophagus."
+    },
+    {
+      "id": 235,
+      "x": 49.48,
+      "y": 31.18,
+      "labelDx": -29.433962264150942,
+      "labelDy": 5.398406374501992,
+      "word": "Nasopharynx",
+      "func": "Uppermost part of the pharynx behind the nasal cavity; an air-only passage."
+    },
+    {
+      "id": 236,
+      "x": 54.01,
+      "y": 69.62,
+      "labelDx": -37.264150943396224,
+      "labelDy": 2.310756972111554,
+      "word": "Vocal fold (vocal cords)",
+      "func": "Folds in the larynx that vibrate as air passes to produce sound."
+    },
+    {
+      "id": 237,
+      "x": 54.76,
+      "y": 88.75,
+      "labelDx": 31.32075471698113,
+      "labelDy": -0.9760956175298805,
+      "word": "Thyroid cartilage",
+      "func": "Largest laryngeal cartilage; forms the 'Adam's apple' and protects the vocal cords."
+    },
+    {
+      "id": 239,
+      "x": 49.58,
+      "y": 24.3,
+      "labelDx": -34.43396226415094,
+      "labelDy": 5.398406374501992,
+      "word": "Opening of auditory (pharyngotympanic) tube",
+      "func": "Opening that equalizes air pressure between the middle ear and the nasopharynx."
+    },
+    {
+      "id": 241,
+      "x": 61.46,
+      "y": 18.43,
+      "labelDx": -47.735849056603776,
+      "labelDy": -11.035856573705178,
       "word": "Nasal conchae",
       "func": "Scroll-like projections that warm, humidify, and filter air by increasing the nasal surface area."
     },
     {
-      "id": 76,
-      "x": 65.22,
-      "y": 14.89,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 243,
+      "x": 27.03,
+      "y": 13.15,
+      "labelDx": -16.88679245283019,
+      "labelDy": 1.1155378486055776,
       "word": "Nasal meatus",
       "func": "Air passages beneath each concha that channel airflow through the nasal cavity."
     },
     {
-      "id": 77,
-      "x": 89.13,
-      "y": 27.66,
+      "id": 253,
+      "x": 92.03,
+      "y": 23.31,
       "labelDx": 0,
       "labelDy": 5,
       "word": "Nasal vestibule",
       "func": "Entrance to the nasal cavity, just inside the nostril."
     },
     {
-      "id": 78,
-      "x": 95.65,
-      "y": 29.79,
+      "id": 254,
+      "x": 97.88,
+      "y": 32.17,
       "labelDx": 0,
       "labelDy": 5,
       "word": "External nares (nostril)",
       "func": "The nostrils \u2014 the openings where air enters the nasal cavity."
     },
     {
-      "id": 79,
-      "x": 82.61,
-      "y": 31.91,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Hard palate",
-      "func": "Bony front of the roof of the mouth that separates the oral and nasal cavities."
-    },
-    {
-      "id": 80,
-      "x": 76.09,
-      "y": 36.17,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Soft palate",
-      "func": "Muscular back of the palate; rises to block the nasopharynx during swallowing."
-    },
-    {
-      "id": 81,
-      "x": 60.87,
-      "y": 40.43,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Uvula",
-      "func": "Fleshy tip of the soft palate that helps close off the nasopharynx during swallowing."
-    },
-    {
-      "id": 82,
-      "x": 47.83,
-      "y": 24.47,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Opening of auditory (pharyngotympanic) tube",
-      "func": "Opening that equalizes air pressure between the middle ear and the nasopharynx."
-    },
-    {
-      "id": 83,
-      "x": 43.48,
-      "y": 28.72,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Nasopharynx",
-      "func": "Uppermost part of the pharynx behind the nasal cavity; an air-only passage."
-    },
-    {
-      "id": 84,
-      "x": 50.0,
-      "y": 45.74,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Oropharynx",
-      "func": "Middle part of the pharynx behind the mouth; a shared passage for air and food."
-    },
-    {
-      "id": 85,
-      "x": 54.35,
-      "y": 53.19,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Laryngopharynx",
-      "func": "Lowest part of the pharynx; a shared passage opening into the larynx and esophagus."
-    },
-    {
-      "id": 86,
-      "x": 65.22,
-      "y": 50.0,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Epiglottis",
-      "func": "Flap of cartilage that covers the laryngeal opening during swallowing to keep food out of the airway."
-    },
-    {
-      "id": 87,
-      "x": 60.87,
-      "y": 62.77,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Vocal fold (vocal cords)",
-      "func": "Folds in the larynx that vibrate as air passes to produce sound."
-    },
-    {
-      "id": 88,
-      "x": 54.35,
-      "y": 63.83,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 259,
+      "x": 49.24,
+      "y": 67.33,
+      "labelDx": -40.17857142857143,
+      "labelDy": -0.17928286852589626,
       "word": "Glottis",
       "func": "The vocal folds together with the opening between them (rima glottidis) through which air passes to make sound."
-    },
-    {
-      "id": 89,
-      "x": 67.39,
-      "y": 60.64,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Thyroid cartilage",
-      "func": "Largest laryngeal cartilage; forms the 'Adam's apple' and protects the vocal cords."
-    },
-    {
-      "id": 90,
-      "x": 65.22,
-      "y": 67.02,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Cricoid cartilage",
-      "func": "Ring-shaped cartilage that supports the larynx and connects it to the trachea."
-    },
-    {
-      "id": 91,
-      "x": 58.7,
-      "y": 88.3,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Trachea",
-      "func": "Windpipe; conducts air between the larynx and the bronchi."
     }
   ],
   "resp_larynx": [
@@ -1231,20 +1231,20 @@ const PRESET_KEYS = {
       "func": "Connects the thyroid cartilage to the cricoid cartilage below it."
     },
     {
-      "id": 95,
-      "x": 36.67,
-      "y": 73.17,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 260,
+      "x": 51.42,
+      "y": 69.63,
+      "labelDx": 18.679245283018865,
+      "labelDy": -3.0578512396694215,
       "word": "Cricoid cartilage",
       "func": "Ring-shaped cartilage at the base of the larynx that connects it to the trachea."
     },
     {
-      "id": 96,
-      "x": 40.0,
-      "y": 82.93,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 261,
+      "x": 50.57,
+      "y": 80.17,
+      "labelDx": 15.471698113207546,
+      "labelDy": -1.1983471074380168,
       "word": "Tracheal cartilages",
       "func": "C-shaped rings of cartilage that hold the trachea open."
     }
@@ -1252,30 +1252,12 @@ const PRESET_KEYS = {
   "resp_lungs": [
     {
       "id": 97,
-      "x": 50.0,
+      "x": 50,
       "y": 7.87,
       "labelDx": 0,
       "labelDy": 5,
       "word": "Trachea",
       "func": "Windpipe; conducts air toward the lungs and divides at the carina."
-    },
-    {
-      "id": 98,
-      "x": 54.17,
-      "y": 32.58,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Carina",
-      "func": "Ridge where the trachea splits into the two main bronchi; a sensitive cough trigger."
-    },
-    {
-      "id": 99,
-      "x": 61.11,
-      "y": 35.96,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Main (primary) bronchus",
-      "func": "Conducts air from the trachea into a lung."
     },
     {
       "id": 100,
@@ -1297,7 +1279,7 @@ const PRESET_KEYS = {
     },
     {
       "id": 102,
-      "x": 25.0,
+      "x": 25,
       "y": 40.45,
       "labelDx": 0,
       "labelDy": 5,
@@ -1306,7 +1288,7 @@ const PRESET_KEYS = {
     },
     {
       "id": 103,
-      "x": 25.0,
+      "x": 25,
       "y": 75.28,
       "labelDx": 0,
       "labelDy": 5,
@@ -1339,65 +1321,74 @@ const PRESET_KEYS = {
       "labelDy": 5,
       "word": "Left inferior lobe",
       "func": "Lower lobe of the left lung."
+    },
+    {
+      "id": 262,
+      "x": 57.26,
+      "y": 35.76,
+      "labelDx": 28.30188679245283,
+      "labelDy": 2.5734355044699875,
+      "word": "Main (primary) bronchus",
+      "func": "Conducts air from the trachea into a lung."
+    },
+    {
+      "id": 263,
+      "x": 53.87,
+      "y": 34.48,
+      "labelDx": -0.4716981132075472,
+      "labelDy": 67.5,
+      "word": "Carina",
+      "func": "Ridge where the trachea splits into the two main bronchi; a sensitive cough trigger."
     }
   ],
   "resp_alveoli": [
     {
-      "id": 107,
-      "x": 37.93,
-      "y": 62.12,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Respiratory bronchiole",
-      "func": "Smallest airway; leads air to the alveolar ducts and has a few alveoli of its own."
-    },
-    {
-      "id": 108,
-      "x": 32.76,
-      "y": 33.33,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Alveolar duct / sac",
-      "func": "Passage that channels air from the bronchiole into clusters of alveoli."
-    },
-    {
-      "id": 109,
-      "x": 93.1,
-      "y": 65.15,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Alveolus",
-      "func": "Tiny air sac where gas exchange occurs between the air and the blood."
-    },
-    {
-      "id": 110,
-      "x": 44.83,
-      "y": 75.76,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 264,
+      "x": 44.72,
+      "y": 91.48,
+      "labelDx": -24.339622641509433,
+      "labelDy": 10.487804878048781,
       "word": "Pulmonary arteriole",
       "func": "Small vessel that delivers deoxygenated blood to the alveolar capillaries."
     },
     {
-      "id": 111,
-      "x": 36.21,
-      "y": 89.39,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 269,
+      "x": 50.38,
+      "y": 81.71,
+      "labelDx": -28.58490566037736,
+      "labelDy": -12.876336148349381,
       "word": "Pulmonary venule",
       "func": "Small vessel that carries freshly oxygenated blood away from the alveoli."
+    },
+    {
+      "id": 271,
+      "x": 35.75,
+      "y": 56.71,
+      "labelDx": -21.32075471698113,
+      "labelDy": -9.02439024390244,
+      "word": "Alveolar duct / sac",
+      "func": "Passage that channels air from the bronchiole into clusters of alveoli."
+    },
+    {
+      "id": 275,
+      "x": 65.38,
+      "y": 79.57,
+      "labelDx": 20,
+      "labelDy": -9.329268292682926,
+      "word": "Alveolus",
+      "func": "Tiny air sac where gas exchange occurs between the air and the blood."
+    },
+    {
+      "id": 277,
+      "x": 45.94,
+      "y": 75.91,
+      "labelDx": -35.84905660377358,
+      "labelDy": 7.7439024390243905,
+      "word": "Respiratory bronchiole",
+      "func": "Smallest airway; leads air to the alveolar ducts and has a few alveoli of its own."
     }
   ],
   "resp_trachea_histo": [
-    {
-      "id": 112,
-      "x": 69.23,
-      "y": 36.99,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Pseudostratified ciliated columnar epithelium",
-      "func": "Lining of the trachea that traps inhaled debris in mucus and sweeps it upward."
-    },
     {
       "id": 113,
       "x": 47.44,
@@ -1408,76 +1399,85 @@ const PRESET_KEYS = {
       "func": "Hair-like projections that sweep mucus and trapped particles up toward the throat."
     },
     {
-      "id": 114,
-      "x": 19.23,
-      "y": 23.29,
+      "id": 278,
+      "x": 67.64,
+      "y": 74.64,
       "labelDx": 0,
       "labelDy": 5,
+      "word": "Tracheal (seromucous) glands",
+      "func": "Glands in the submucosa that secrete watery mucus onto the tracheal lining."
+    },
+    {
+      "id": 280,
+      "x": 21.89,
+      "y": 25.73,
+      "labelDx": -0.2830188679245283,
+      "labelDy": -20.18248175182482,
       "word": "Goblet cell",
       "func": "Secretes the mucus that traps inhaled dust and microbes."
     },
     {
-      "id": 115,
-      "x": 32.05,
-      "y": 56.16,
+      "id": 281,
+      "x": 95.75,
+      "y": 72.26,
       "labelDx": 0,
       "labelDy": 5,
       "word": "Mucosa",
       "func": "Inner lining of the trachea \u2014 the epithelium plus the underlying lamina propria (loose connective tissue)."
     },
     {
-      "id": 116,
-      "x": 91.03,
-      "y": 76.71,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Tracheal (seromucous) glands",
-      "func": "Glands in the submucosa that secrete watery mucus onto the tracheal lining."
+      "id": 283,
+      "x": 97.64,
+      "y": 41.61,
+      "labelDx": -18.421052631578945,
+      "labelDy": -0.8394160583941606,
+      "word": "Pseudostratified ciliated columnar epithelium",
+      "func": "Lining of the trachea that traps inhaled debris in mucus and sweeps it upward."
     }
   ],
   "resp_pleura": [
     {
-      "id": 117,
-      "x": 74.19,
-      "y": 48.57,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 284,
+      "x": 59.72,
+      "y": 45.99,
+      "labelDx": -28.11320754716981,
+      "labelDy": -0.9347181008902083,
       "word": "Parietal pleura",
       "func": "Serous membrane lining the chest wall \u2014 the outer pleural layer."
     },
     {
-      "id": 118,
-      "x": 67.74,
-      "y": 65.71,
-      "labelDx": 0,
-      "labelDy": 5,
-      "word": "Pleural cavity",
-      "func": "Fluid-filled space between the two pleurae that reduces friction during breathing."
-    },
-    {
-      "id": 119,
-      "x": 64.52,
-      "y": 85.71,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 285,
+      "x": 59.91,
+      "y": 91.1,
+      "labelDx": -30.09433962264151,
+      "labelDy": -2.4183976261127587,
       "word": "Visceral pleura",
       "func": "Serous membrane covering the surface of the lung \u2014 the inner pleural layer."
+    },
+    {
+      "id": 286,
+      "x": 41.51,
+      "y": 62.02,
+      "labelDx": -13.49056603773585,
+      "labelDy": 7.077151335311573,
+      "word": "Pleural cavity",
+      "func": "Fluid-filled space between the two pleurae that reduces friction during breathing."
     }
   ],
   "resp_muscles": [
     {
-      "id": 120,
-      "x": 25.0,
-      "y": 28.57,
-      "labelDx": 0,
-      "labelDy": 5,
+      "id": 287,
+      "x": 29.25,
+      "y": 28.89,
+      "labelDx": -14.716981132075471,
+      "labelDy": -2.1604938271604937,
       "word": "Intercostal muscles",
       "func": "Muscles between the ribs that raise and lower the rib cage during breathing."
     },
     {
-      "id": 121,
-      "x": 57.5,
-      "y": 78.57,
+      "id": 288,
+      "x": 62.83,
+      "y": 58.64,
       "labelDx": 0,
       "labelDy": 5,
       "word": "Diaphragm",
