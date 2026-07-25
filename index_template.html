@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>BIOL 40B — Lab Exam 2 Labeling</title>
+    <link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+    <header>
+        <h1>BIOL 40B — Lab Exam 2: Cardiovascular &amp; Respiratory</h1>
+        <div class="header-controls">
+            <div class="mode-toggle">
+                <button id="btn-teacher" class="mode-btn active" onclick="setMode('teacher')">Teacher Mode</button>
+                <button id="btn-student" class="mode-btn" onclick="setMode('student')">Student Mode</button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="image-tabs">
+<!--__TABS__-->
+    </nav>
+
+    <main>
+        <div class="workspace">
+            <div class="image-viewport" id="image-viewport">
+                <div class="zoom-controls">
+                    <button class="zoom-btn" onclick="zoomIn()" title="Zoom in">+</button>
+                    <span class="zoom-level" id="zoom-level">100%</span>
+                    <button class="zoom-btn" onclick="zoomOut()" title="Zoom out">&minus;</button>
+                    <button class="zoom-btn zoom-fit" onclick="zoomReset()" title="Fit to view">Fit</button>
+                </div>
+                <div class="image-container" id="image-container">
+                    <img id="main-image" src="" alt="Lab image" draggable="false">
+                    <svg id="lines-layer" xmlns="http://www.w3.org/2000/svg"></svg>
+                    <div id="markers-layer"></div>
+                </div>
+                <div class="pdf-container" id="pdf-container" style="display:none;">
+                    <iframe id="pdf-frame" src="" title="PDF"></iframe>
+                    <a id="pdf-download" href="#" download>Download PDF</a>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="instructions" id="instructions">
+                    <h3>Teacher Mode</h3>
+                    <p>Every station already has a saved answer key from the verified
+                       practical pins. <b>Drag a pin</b> to correct its position, drag a
+                       label to move it, then Save. <i>Restore Original Key</i> undoes
+                       your edits to a station.</p>
+                </div>
+
+                <div class="word-bank" id="word-bank">
+                    <h3>Word Bank</h3>
+                    <div id="word-list"></div>
+                </div>
+
+                <div class="actions">
+                    <button id="btn-save" class="action-btn save-btn" onclick="saveAnswerKey()">Save Answer Key</button>
+                    <button id="btn-submit" class="action-btn submit-btn" onclick="submitAnswers()" style="display:none;">Submit Answers</button>
+                    <button id="btn-reset" class="action-btn reset-btn" onclick="resetCurrent()">Reset</button>
+                    <button id="btn-restore" class="action-btn data-btn" onclick="restorePreset()">Restore Original Key</button>
+                    <button id="btn-export" class="action-btn data-btn" onclick="exportData()">Export Data</button>
+                    <button id="btn-import" class="action-btn data-btn" onclick="document.getElementById('import-file').click()">Import Data</button>
+                    <input type="file" id="import-file" accept="application/json,.json" style="display:none;" onchange="importData(event)">
+                </div>
+
+                <div id="results" class="results" style="display:none;"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="credits">
+        <details id="credits-panel">
+            <summary>Image credits &amp; licensing</summary>
+            <div id="credits-list"></div>
+            <p class="credits-note">
+                A free study aid for BIOL&nbsp;40B. Figures remain the property of
+                their respective authors under the licences listed above.
+            </p>
+        </details>
+    </footer>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="data.js?v=1"></script>
+    <script src="app.js?v=1"></script>
+</body>
+</html>
