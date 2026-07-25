@@ -12,7 +12,12 @@ tracking — open `index.html` and it works, including offline once loaded.
 ## Modes
 
 **Student Mode** — each station shows numbered pins and a word bank. Drag a
-term onto a pin, or tap a term then tap a pin. Submit to score the station.
+term onto a pin, or tap a term then tap a pin.
+
+**Only the correct term will stick.** A wrong one bounces back with a red shake
+and stays in the word bank, so you can't leave a station holding a wrong answer.
+Correct answers lock in green. The station scores itself once every pin is
+filled, reporting first-try accuracy and how many wrong drops it took.
 
 **Teacher Mode** — the correction mode. Every station arrives pre-pinned from a
 verified answer key; this is where we fix a pin that points at the wrong thing.
@@ -22,7 +27,9 @@ verified answer key; this is where we fix a pin that points at the wrong thing.
 - Tap the image to add a pin; tap **X** to remove one
 - Tap a term, then a pin's label, to assign it
 - **Save Answer Key** commits the station
-- **Restore Original Key** discards your edits to that station
+- **You Make the Answer Key** blanks the station so you can pin it from
+  scratch — a harder drill than correcting, and it sticks across reloads
+- **Restore Original Key** discards your edits and brings the original pins back
 
 Work is saved to `localStorage`, so it stays on the device it was entered on.
 **Export Data** / **Import Data** move a key between devices.

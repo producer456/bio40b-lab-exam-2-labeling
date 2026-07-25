@@ -757,3 +757,38 @@ body.pin-dragging .marker-dot:hover {
     color: var(--text-light);
     font-style: italic;
 }
+
+/* ---- Wrong-drop rejection (student mode) ---- */
+@keyframes reject-shake {
+    0%, 100% { transform: translate(-50%, -50%); }
+    20%      { transform: translate(-50%, -50%) translateX(-7px); }
+    40%      { transform: translate(-50%, -50%) translateX(7px); }
+    60%      { transform: translate(-50%, -50%) translateX(-5px); }
+    80%      { transform: translate(-50%, -50%) translateX(3px); }
+}
+
+.marker-label.reject,
+.marker-dot.reject {
+    animation: reject-shake 0.42s ease-in-out;
+    border-color: var(--coral) !important;
+    background: var(--coral-light) !important;
+    color: var(--text-dark);
+}
+
+/* Correct answers lock in — make that unmistakable. */
+.marker-label.correct {
+    border-color: var(--kelp-green);
+    background: var(--kelp-light);
+    color: #10240f;
+    font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .marker-label.reject,
+    .marker-dot.reject { animation: none; }
+}
+
+.blank-btn {
+    background: linear-gradient(135deg, var(--driftwood) 0%, #6f5b42 100%);
+    color: var(--sand-light);
+}

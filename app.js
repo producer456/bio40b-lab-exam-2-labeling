@@ -25,6 +25,13 @@ let touchCurrentTarget = null;
 // Tap-to-select state
 let selectedWord = null;
 
+// Wrong drops per station, so the summary can report accuracy.
+let missCounts = {};
+
+// Stations deliberately emptied via "Start Blank". Without this the seeding
+// in seedTeacherMarkers() would helpfully refill them on the next reload.
+let blankStations = {};
+
 // Label dragging state
 let draggingLabel = null;
 let labelDragStart = null;
@@ -312,6 +319,8 @@ function setMode(mode) {
 
     document.getElementById('btn-save').style.display = mode === 'teacher' ? '' : 'none';
     document.getElementById('btn-submit').style.display = mode === 'student' ? '' : 'none';
+    document.getElementById('btn-blank').style.display = mode === 'teacher' ? '' : 'none';
+    document.getElementById('btn-restore').style.display = mode === 'teacher' ? '' : 'none';
 
     const inst = document.getElementById('instructions');
     if (mode === 'teacher') {
@@ -330,8 +339,11 @@ function setMode(mode) {
         const hasKey = answerKeys[currentImage] && answerKeys[currentImage].length > 0;
         if (hasKey) {
             inst.innerHTML = `<h3>Student Mode</h3>
-                <p>Drag terms onto the numbered markers, or tap a term then tap a marker.<br>
-                   Use +/&minus; to zoom in. Tap Submit when done.</p>`;
+                <p>Drag a term onto a numbered pin — or tap the term, then the pin.</p>
+                <p><b>Only the right term will stick.</b> A wrong one bounces back
+                   with a red flash, so keep trying until it lands.</p>
+                <p>Use +/&minus; or pinch to zoom in on the histology slides.
+                   The station scores itself once every pin is filled.</p>`;
         } else {
             inst.innerHTML = `<h3>Student Mode</h3>
                 <p style="color:var(--coral);">No answer key saved for this image yet.
@@ -348,6 +360,7 @@ function setMode(mode) {
             JSON.parse(JSON.stringify(markers[currentImage])) : [];
 
         // Load answer key positions for student
+        missCounts[currentImage] = 0;
         const key = answerKeys[currentImage];
         if (key && key.length > 0) {
             markers[currentImage] = key.map(k => ({
@@ -943,6 +956,33 @@ function removeMarker(id) {
 function assignWord(markerId, word) {
     const m = (markers[currentImage] || []).find(mk => mk.id === markerId);
     if (!m) return;
+
+    // Student mode only accepts the right term on the right pin: a wrong drop
+    // bounces instead of sticking, so the board is always a correct board.
+    if (currentMode === 'student') {
+        const key = (answerKeys[currentImage] || []).find(k => k.id === markerId);
+        if (!key) return;
+
+        if (m.resultClass === 'correct') {
+            showToast('That pin is already answered', 'error');
+            return;
+        }
+
+        if (key.word !== word) {
+            missCounts[currentImage] = (missCounts[currentImage] || 0) + 1;
+            rejectDrop(markerId);
+            showToast(`Not this one — "${word}" goes somewhere else`, 'error');
+            return;
+        }
+
+        m.word = word;
+        m.resultClass = 'correct';
+        saveMarkers();
+        renderAll();
+        checkStationComplete();
+        return;
+    }
+
     (markers[currentImage] || []).forEach(mk => {
         if (mk.word === word) mk.word = null;
     });
@@ -951,11 +991,35 @@ function assignWord(markerId, word) {
     renderAll();
 }
 
+// Flash the pin the student aimed at, without re-rendering (nothing changed).
+function rejectDrop(markerId) {
+    const sel = `[data-marker-id="${markerId}"]`;
+    [document.querySelector(sel),
+     document.querySelector(`.marker-dot[data-id="${markerId}"]`)].forEach(el => {
+        if (!el) return;
+        el.classList.remove('reject');
+        void el.offsetWidth;          // restart the animation
+        el.classList.add('reject');
+        setTimeout(() => el.classList.remove('reject'), 500);
+    });
+}
+
+// Every pin correct = station done; say so without making them hit Submit.
+function checkStationComplete() {
+    const m = markers[currentImage] || [];
+    if (!m.length || m.some(mk => mk.resultClass !== 'correct')) return;
+    setTimeout(() => submitAnswers(), 350);
+}
+
 function unassignWord(markerId) {
     const m = (markers[currentImage] || []).find(mk => mk.id === markerId);
     if (m) {
         m.word = null;
+        // Clear the lock too, or the pin stays green-and-answered with no term
+        // on it and assignWord refuses to refill it.
+        m.resultClass = null;
         saveMarkers();
+        document.getElementById('results').style.display = 'none';
         renderAll();
     }
 }
@@ -1069,6 +1133,9 @@ function saveMarkers() {
     try {
         localStorage.setItem('bio40b_labexam2_markers', JSON.stringify(markers));
         localStorage.setItem('bio40b_labexam2_markerCounter', markerIdCounter);
+        // Correct answers persist, so the misses that earned them must too.
+        localStorage.setItem('bio40b_labexam2_misses', JSON.stringify(missCounts));
+        localStorage.setItem('bio40b_labexam2_blank', JSON.stringify(blankStations));
     } catch(e) {}
 }
 
@@ -1078,6 +1145,10 @@ function loadMarkers() {
         if (data) markers = JSON.parse(data);
         const counter = localStorage.getItem('bio40b_labexam2_markerCounter');
         if (counter) markerIdCounter = parseInt(counter);
+        const misses = localStorage.getItem('bio40b_labexam2_misses');
+        if (misses) missCounts = JSON.parse(misses);
+        const blank = localStorage.getItem('bio40b_labexam2_blank');
+        if (blank) blankStations = JSON.parse(blank);
     } catch(e) {}
 }
 
@@ -1124,11 +1195,25 @@ function loadAnswerKeys() {
 // rather than a blank image.
 function seedTeacherMarkers() {
     IMAGE_ORDER.forEach(k => {
+        if (blankStations[k]) return;   // emptied on purpose — leave it empty
         if ((!markers[k] || !markers[k].length) && answerKeys[k] && answerKeys[k].length) {
             markers[k] = JSON.parse(JSON.stringify(answerKeys[k]));
         }
     });
     saveMarkers();
+}
+
+// Blank the station and pin it from scratch, building the key yourself.
+function startBlank() {
+    blankStations[currentImage] = true;
+    markers[currentImage] = [];
+    teacherMarkers[currentImage] = [];
+    missCounts[currentImage] = 0;
+    clearSelectedWord();
+    saveMarkers();
+    document.getElementById('results').style.display = 'none';
+    renderAll();
+    showToast('Blank slate — place every pin yourself, then Save', 'success');
 }
 
 function saveAnswerKeysToStorage() {
@@ -1144,6 +1229,7 @@ function restorePreset() {
         showToast('No generated key exists for this station', 'error');
         return;
     }
+    blankStations[currentImage] = false;   // no longer deliberately empty
     answerKeys[currentImage] = JSON.parse(JSON.stringify(preset));
     saveAnswerKeysToStorage();
     markers[currentImage] = JSON.parse(JSON.stringify(preset));
@@ -1161,7 +1247,9 @@ function exportData() {
         exportedAt: new Date().toISOString(),
         bio40b_labexam2_markers: localStorage.getItem('bio40b_labexam2_markers'),
         bio40b_labexam2_markerCounter: localStorage.getItem('bio40b_labexam2_markerCounter'),
-        bio40b_labexam2_answerKeys: localStorage.getItem('bio40b_labexam2_answerKeys')
+        bio40b_labexam2_answerKeys: localStorage.getItem('bio40b_labexam2_answerKeys'),
+        bio40b_labexam2_misses: localStorage.getItem('bio40b_labexam2_misses'),
+        bio40b_labexam2_blank: localStorage.getItem('bio40b_labexam2_blank')
     };
     const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
@@ -1195,6 +1283,8 @@ function importData(event) {
             if (payload.bio40b_labexam2_markers != null) localStorage.setItem('bio40b_labexam2_markers', payload.bio40b_labexam2_markers);
             if (payload.bio40b_labexam2_markerCounter != null) localStorage.setItem('bio40b_labexam2_markerCounter', payload.bio40b_labexam2_markerCounter);
             if (payload.bio40b_labexam2_answerKeys != null) localStorage.setItem('bio40b_labexam2_answerKeys', payload.bio40b_labexam2_answerKeys);
+            if (payload.bio40b_labexam2_misses != null) localStorage.setItem('bio40b_labexam2_misses', payload.bio40b_labexam2_misses);
+            if (payload.bio40b_labexam2_blank != null) localStorage.setItem('bio40b_labexam2_blank', payload.bio40b_labexam2_blank);
             showToast('Import successful — reloading…', 'success');
             setTimeout(() => location.reload(), 800);
         } catch (err) {
@@ -1214,48 +1304,42 @@ function submitAnswers() {
         return;
     }
 
+    // Wrong terms never stick, so every placed pin is correct by construction.
+    // What's worth reporting is how much of the station is done and how many
+    // tries it took to get there.
     const studentMarkers = markers[currentImage] || [];
-    let correct = 0;
-    let total = key.length;
-    const wrongItems = [];
-
-    studentMarkers.forEach(sm => {
-        const keyMarker = key.find(k => k.id === sm.id);
-        if (keyMarker) {
-            if (sm.word === keyMarker.word) {
-                sm.resultClass = 'correct';
-                correct++;
-            } else {
-                sm.resultClass = 'incorrect';
-                wrongItems.push({
-                    marker: key.indexOf(keyMarker) + 1,
-                    yours: sm.word || '(empty)',
-                    correct: keyMarker.word
-                });
-            }
-        }
-    });
+    const total = key.length;
+    const placed = studentMarkers.filter(sm => sm.resultClass === 'correct').length;
+    const misses = missCounts[currentImage] || 0;
+    const attempts = placed + misses;
+    const accuracy = attempts ? Math.round((placed / attempts) * 100) : 100;
 
     renderAll();
 
-    const pct = Math.round((correct / total) * 100);
-    const scoreClass = pct === 100 ? 'perfect' : pct >= 70 ? 'good' : 'poor';
+    const done = placed === total;
+    const scoreClass = !done ? 'good' : misses === 0 ? 'perfect' : accuracy >= 70 ? 'good' : 'poor';
     const resultsDiv = document.getElementById('results');
     resultsDiv.style.display = 'block';
 
-    let html = `<h3>Results</h3>
-        <div class="score ${scoreClass}">${correct}/${total} (${pct}%)</div>`;
+    let html = `<h3>${done ? 'Station complete' : 'Progress'}</h3>
+        <div class="score ${scoreClass}">${placed}/${total} placed</div>`;
 
-    if (wrongItems.length > 0) {
-        html += `<div class="detail" style="margin-bottom:8px;">Incorrect answers:</div>`;
-        wrongItems.forEach(w => {
-            html += `<div class="wrong-item">
-                #${w.marker}: You said <strong>${w.yours}</strong><br>
-                Correct: <strong>${w.correct}</strong>
-            </div>`;
-        });
+    if (!done) {
+        html += `<div class="detail" style="text-align:center;">
+            ${total - placed} still to go — keep going.</div>`;
+    } else if (misses === 0) {
+        html += `<div class="detail" style="color:#4a7c59; text-align:center;">
+            Clean sweep — no wrong drops. 🎉</div>`;
     } else {
-        html += `<div class="detail" style="color:#4a7c59; text-align:center;">Perfect score!</div>`;
+        html += `<div class="detail" style="text-align:center;">
+            ${accuracy}% first-try accuracy &middot;
+            ${misses} wrong ${misses === 1 ? 'drop' : 'drops'}</div>`;
+    }
+
+    if (misses > 0) {
+        html += `<div class="detail" style="margin-top:10px; text-align:center;">
+            <button class="action-btn reset-btn" onclick="resetCurrent()"
+                    style="width:100%;">Try this station again</button></div>`;
     }
 
     resultsDiv.innerHTML = html;
@@ -1281,6 +1365,7 @@ function resetCurrent() {
         }
     }
 
+    missCounts[currentImage] = 0;
     saveMarkers();
     document.getElementById('results').style.display = 'none';
     renderAll();
@@ -1306,6 +1391,7 @@ window.saveAnswerKey = saveAnswerKey;
 window.submitAnswers = submitAnswers;
 window.resetCurrent = resetCurrent;
 window.restorePreset = restorePreset;
+window.startBlank = startBlank;
 window.exportData = exportData;
 window.importData = importData;
 
