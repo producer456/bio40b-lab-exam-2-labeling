@@ -1140,10 +1140,10 @@ const PRESET_KEYS = {
     },
     {
       "id": 237,
-      "x": 54.76,
-      "y": 88.75,
-      "labelDx": 31.32075471698113,
-      "labelDy": -0.9760956175298805,
+      "x": 48.02,
+      "y": 77.49,
+      "labelDx": 31.93,
+      "labelDy": 0.32,
       "word": "Thyroid cartilage",
       "func": "Largest laryngeal cartilage; forms the 'Adam's apple' and protects the vocal cords."
     },
